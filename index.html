@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-green-200 py-8 flex justify-center">
+  <div class="mx-4 w-full flex justify-center">
+    <form action="" class="actionForm">
+      <h1 class="text-3xl font-semibold mb-4">Contact Us</h1>
+      <div class="flex max-sm:flex-col">
+        <div class="left-part">
+          <label>First Name *</label>
+          <input type="text" value="" id="firstName" class="inputCustom">
+          <span class="error" id="firstNameError">This field is required</span>
+        </div>
+        <div class="left-part">
+          <label>Last Name *</label>
+          <input type="text" value="" id="lastName" class="inputCustom">
+          <span class="error" id="lastNameError">This field is required</span>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="w-full mr-4 my-5 max-sm:mr-0">
+          <label for="">Email Address *</label>
+          <input id="email" type="email" class="h-8 w-full outline outline-1 rounded-sm pl-4">
+          <span class="error" id="emailError">Please enter a valid email address</span>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <label for="">Query Type *</label>
+        <div class="flex mt-1 max-sm:flex-col">
+          <div class="left-box" name="group">
+              <input type="radio" class="mx-5 accent-green-600 cursor-pointer max-sm:mx-2" name="queryType" id="radioFirst">
+              <label for="general">General Enquiry</label>
+          </div>
+  
+          <div class="left-box left__box2" name="group">
+            <input type="radio" class="mx-5 accent-green-600 cursor-pointer max-sm:mx-2" name="queryType" id="radioSecond">
+            <label for="support">Support Request</label>
+          </div>
+        </div>
+        <span class="error" id="queryTypeError">Please select a query type</span>
+      </div>
+
+      <div class="flex">
+        <div class="w-full mr-4 my-5 max-sm:mr-0">
+          <label for="">Message *</label>
+          <textarea class="w-full px-4 pt-2 outline outline-1 rounded-sm" rows="4" name="" id="message"></textarea>
+          <span class="error" id="messageError">This field is required</span>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="flex">
+          <input class="mr-4 w-4 accent-green-700" type="checkbox" name="checked" id="consent">
+          <p class="text-sm">I consent to being contacted by the team *</p>
+        </div>
+        <span class="error" name="checked" id="consentError">To submit this form, please consent to being contacted</span>
+      </div>
+
+      <div class="mt-6 mr-4">
+        <button class="w-full bg-green-700 text-white h-11 rounded-md
+         hover:bg-green-800 transition-all duration-200">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Custom Alert Modal -->
+  <div id="customAlert">
+    <div class="bg-green-800 w-full rounded-md shadow-md flex flex-col items-start justify-center pl-6">
+      <div class="flex items-center mx-1">
+        <img src="./assets/images/icon-success-check.svg" alt="">
+        <h3 class="text-white text-lg font-bold pl-3">Message Sent!</h3>
+      </div>
+      <p id="customAlertMessage" class="mt-1 text-white text-sm">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </div>
+</body>
+</html>

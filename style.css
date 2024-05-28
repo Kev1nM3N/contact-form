@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: karla, sans-serif, 'Times New Roman', Times, serif;
+}
+
+input[type=text]:focus,
+input[type=email]:focus, 
+textarea:focus, 
+.left-box:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+textarea:hover,
+.left-box:hover{
+    outline: 1px solid hsl(169, 82%, 27%);
+    border: none;
+}
+
+.actionForm {
+    width: 40rem;
+    padding: 30px;
+    margin: 1rem;
+    border-radius: 12px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.inputCustom {
+    border: 1px solid;
+    border-radius: 4px;
+    padding-left: 16px;
+    height: 2rem;
+    margin-right: 16px;
+    position: relative;
+}
+
+.left-box {
+    outline: 1px solid;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 35px;
+    margin-right: 16px;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+#customAlert {
+    display: none;
+    position: absolute;
+    top: 22px;
+    width: 400px;
+    height: 90px;
+    border-radius: 9px;
+  }
+  
+  #customAlert.show {
+    display: flex;
+  }
+
+
+@media (max-width: 640px) {
+    .actionForm {
+        max-width: 25rem;
+        width: 100%;
+    }
+
+    .inputCustom {
+        margin-right: 0;
+    }
+
+    .left-part, .left-box {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 14px;
+    }
+
+   
+}
